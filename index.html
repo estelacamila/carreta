@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carreta Alto Nível</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #fffdf5; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: linear-gradient(90deg, #ffd32a, #ffea85); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    header .logo { display: flex; align-items: center; gap: 15px; }
+    header img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; }
+    header h1 { font-size: 1.8rem; font-weight: 700; color: #333; }
+    nav a { margin-left: 20px; font-weight: 600; color: #333; transition: color 0.3s ease; }
+    nav a:hover { color: #ffb800; }
+
+    /* Carrossel */
+    .carousel { position: relative; overflow: hidden; max-width: 90%; margin: 40px auto; border-radius: 15px; }
+    .carousel img { width: 100%; max-height: 500px; object-fit: cover; display: none; }
+    .carousel img.active { display: block; }
+
+    /* Nossos Serviços */
+    .services { background-color: #fff8dc; padding: 50px 20px; text-align: center; }
+    .services h2 { font-size: 2rem; font-weight: 700; margin-bottom: 30px; color: #ffb800; }
+    .service-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .service-card {
+      background: #fff; border-radius: 15px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      flex: 1 1 250px; max-width: 300px; overflow: hidden; cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; padding: 20px;
+    }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+    .service-card h3 { margin-bottom: 10px; color: #ffb800; cursor: pointer; }
+    .service-card p { max-height: 0; overflow: hidden; transition: max-height 0.5s ease, padding 0.5s ease; }
+    .service-card.active p { max-height: 200px; padding-top: 10px; }
+
+    /* Galeria */
+    .gallery { padding: 50px 20px; text-align: center; }
+    .gallery h2 { font-size: 2rem; font-weight: 700; margin-bottom: 30px; color: #ffb800; }
+    .gallery-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .gallery-grid img, .gallery-grid video {
+      width: 200px; height: 200px; object-fit: cover; border-radius: 15px; cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover, .gallery-grid video:hover { transform: scale(1.05); }
+
+    /* Contato */
+    .contact { background-color: #ff6b6b; color: #fff; padding: 50px 20px; text-align: center; position: relative; }
+    .contact h2 { font-size: 2rem; margin-bottom: 20px; }
+    .contact p { margin-bottom: 10px; font-weight: 500; }
+    .contact a {
+      display: inline-block; margin-top: 10px; background-color: #ffd32a;
+      color: #333; padding: 12px 25px; border-radius: 25px; font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact a:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
+    .contact .instagram-link { margin-top: 15px; }
+    .contact-message { margin-top: 30px; font-style: italic; font-size: 1.1rem; }
+
+    /* Frase bíblica */
+    .biblical-quote {
+      position: fixed; bottom: 10px; right: 10px; font-size: 0.9rem;
+      font-style: italic; color: #555; background-color: rgba(255,255,255,0.7);
+      padding: 8px 12px; border-radius: 10px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.5rem; }
+      .service-card { flex: 1 1 45%; }
+      .gallery-grid img, .gallery-grid video { width: 150px; height: 150px; }
+    }
+    @media (max-width: 480px) {
+      header { flex-direction: column; gap: 10px; }
+      nav { display: flex; flex-wrap: wrap; justify-content: center; }
+      .service-card { flex: 1 1 100%; }
+      .gallery-grid img, .gallery-grid video { width: 120px; height: 120px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="./img/IMG_3881.png.png" alt="Logo Carreta Alto Nível">
+      <h1>Carreta Alto Nível</h1>
+    </div>
+    <nav>
+      <a href="#services">Serviços</a>
+      <a href="#gallery">Galeria</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Carrossel -->
+  <div class="carousel">
+    <img src="./img/WhatsApp Image 2025-10-14 at 12.43.32.jpeg" class="active" alt="Imagem 1">
+    <img src="./img/WhatsApp Image 2025-10-14 at 12.43.57.jpeg" alt="Imagem 2">
+    <img src="./img/WhatsApp Image 2025-10-14 at 12.43.57 (1).jpeg" alt="Imagem 3">
+  </div>
+
+  <!-- Nossos Serviços -->
+  <section id="services" class="services">
+    <h2>Nossos Serviços</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <h3>Aluguel de Carreta</h3>
+        <p>Oferecemos carretas para eventos e festas, com conforto e segurança.</p>
+      </div>
+      <div class="service-card">
+        <h3>Personalização</h3>
+        <p>Carretas decoradas conforme o tema do seu evento.</p>
+      </div>
+      <div class="service-card">
+        <h3>Transporte Seguro</h3>
+        <p>Nossos motoristas são experientes e garantem uma viagem tranquila.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section id="gallery" class="gallery">
+    <h2>Galeria</h2>
+    <div class="gallery-grid">
+      <img src="./img/" alt="Galeria 1">
+      <img src="img/WhatsApp Image 2025-10-14 at 12.43.57 (2).jpeg" alt="Galeria 2">
+      <img src="img/WhatsApp Image 2025-10-14 at 12.43.58.jpeg" alt="Galeria 3">
+      <!-- Vídeos corretamente inseridos -->
+      <video controls>
+        <source src="./videos/WhatsApp Video 2025-10-13 at 15.53.36 (1).mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+      <video controls>
+        <source src="./videos/WhatsApp Video 2025-10-14 at 12.43.56.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contact" class="contact">
+    <h2>Contato</h2>
+    <p>Telefone: (XX) XXXX-XXXX</p>
+    <p>Email: contato@carretalt.com</p>
+    <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/seu_usuario/" target="_blank" class="instagram-link">
+      <img src="instagram-icon.png" alt="Instagram"> @seu_usuario
+    </a>
+    <div class="contact-message">
+      Nós da Carreta Alto Nível estamos prontos para tornar seu evento inesquecível!
+    </div>
+  </section>
+
+  <!-- Frase bíblica -->
+  <div class="biblical-quote">
+    "Consagre ao Senhor tudo que você faz, e os seus planos serão bem-sucedidos." Provérbios 16:3
+  </div>
+
+  <script>
+    // Carrossel automático
+    const slides = document.querySelectorAll('.carousel img');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
+
+    // Serviços clicáveis
+    const serviceCards = document.querySelectorAll('.service-card h3');
+    serviceCards.forEach(title => {
+      title.addEventListener('click', () => {
+        const card = title.parentElement;
+        card.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
