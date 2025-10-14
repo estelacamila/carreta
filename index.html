@@ -15,8 +15,11 @@
     header .logo { display: flex; align-items: center; gap: 15px; }
     header img { width: 150px; height: auto; border-radius: 0; object-fit: contain; border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
     header h1 { font-size: 1.8rem; font-weight: 700; color: #333; }
-    nav a { margin-left: 20px; font-weight: 600; color: #333; transition: color 0.3s ease; }
-    nav a:hover { color: #ffb800; }
+    nav a { margin-left: 20px; font-weight: 600; transition: color 0.3s ease; }
+    nav a.services-link { color: #f44336; }
+    nav a.gallery-link { color: #2196f3; }
+    nav a.contact-link { color: #ffd32a; }
+    nav a:hover { opacity: 0.8; }
 
     /* Carrossel */
     .carousel { position: relative; overflow: hidden; max-width: 90%; margin: 40px auto; border-radius: 15px; }
@@ -25,7 +28,7 @@
 
     /* Nossos Serviços */
     .services { background-color: #fff8dc; padding: 50px 20px; text-align: center; }
-    .services h2 { font-size: 2rem; font-weight: 700; margin-bottom: 30px; color: #ffb800; }
+    .services h2 { font-size: 2rem; font-weight: 700; margin-bottom: 30px; color: #f44336; }
     .service-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
     .service-card {
       background: #fff; border-radius: 15px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);
@@ -34,7 +37,6 @@
     }
     .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
 
-    /* Títulos coloridos dos serviços */
     .service-card h3 {
       margin-bottom: 10px;
       padding: 10px;
@@ -45,12 +47,12 @@
       text-align: center;
       transition: transform 0.3s ease;
     }
-    .service-card:nth-child(1) h3 { background-color: #f44336; } /* vermelho */
-    .service-card:nth-child(2) h3 { background-color: #2196f3; } /* azul */
-    .service-card:nth-child(3) h3 { background-color: #ff9800; } /* laranja */
-    .service-card:nth-child(4) h3 { background-color: #4caf50; } /* verde */
-    .service-card:nth-child(5) h3 { background-color: #9c27b0; } /* roxo */
-    .service-card:nth-child(6) h3 { background-color: #00bcd4; } /* azul claro */
+    .service-card:nth-child(1) h3 { background-color: #f44336; }
+    .service-card:nth-child(2) h3 { background-color: #2196f3; }
+    .service-card:nth-child(3) h3 { background-color: #ff9800; }
+    .service-card:nth-child(4) h3 { background-color: #4caf50; }
+    .service-card:nth-child(5) h3 { background-color: #9c27b0; }
+    .service-card:nth-child(6) h3 { background-color: #00bcd4; }
     .service-card h3:hover { transform: scale(1.05); }
 
     .service-card p { max-height: 0; overflow: hidden; transition: max-height 0.5s ease, padding 0.5s ease; }
@@ -58,7 +60,7 @@
 
     /* Galeria */
     .gallery { padding: 50px 20px; text-align: center; }
-    .gallery h2 { font-size: 2rem; font-weight: 700; margin-bottom: 30px; color: #ffb800; }
+    .gallery h2 { font-size: 2rem; font-weight: 700; margin-bottom: 30px; color: #2196f3; }
     .gallery-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
     .gallery-grid img, .gallery-grid video {
       width: 200px; height: 200px; object-fit: cover; border-radius: 15px; cursor: pointer;
@@ -66,7 +68,7 @@
     }
     .gallery-grid img:hover, .gallery-grid video:hover { transform: scale(1.05); }
 
-    /* Contato atualizado */
+    /* Contato */
     .contact {
       background-color: #e42355;
       color: #fff;
@@ -74,74 +76,34 @@
       text-align: center;
       border-radius: 20px 20px 0 0;
     }
-
-    .contact h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      font-weight: 700;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      align-items: center;
-      margin-bottom: 30px;
-    }
-
+    .contact h2 { font-size: 2rem; margin-bottom: 30px; font-weight: 700; color: #ffd32a; }
+    .contact-info { display: flex; flex-direction: column; gap: 15px; align-items: center; margin-bottom: 30px; }
     .contact-info a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background-color: #fff;
-      color: #e42355;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-weight: 600;
+      display: flex; align-items: center; gap: 10px;
+      background-color: #fff; color: #e42355;
+      padding: 12px 25px; border-radius: 25px; font-weight: 600;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    .contact-info a:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
 
-    .contact-info a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-
-    .contact-message {
-      font-style: italic;
-      font-size: 1.1rem;
-      margin-top: 20px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .contact-message { font-style: italic; font-size: 1.1rem; margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
     .biblical-quote {
-      font-style: italic;
-      color: #fff;
+      font-style: italic; color: #fff;
       background-color: rgba(0,0,0,0.5);
-      padding: 10px 20px;
-      border-radius: 15px;
-      margin-top: 25px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 10px 20px; border-radius: 15px;
+      margin-top: 25px; max-width: 500px;
+      margin-left: auto; margin-right: auto;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
-    /* Botão flutuante WhatsApp com ícone */
+    /* Botão flutuante WhatsApp */
     .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      background-color: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      z-index: 1000;
+      position: fixed; bottom: 20px; right: 20px;
+      width: 60px; height: 60px; background-color: #25D366;
+      border-radius: 50%; display: flex;
+      align-items: center; justify-content: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000;
       transition: transform 0.3s;
     }
     .whatsapp-btn img { width: 35px; height: 35px; }
@@ -170,9 +132,9 @@
       <h1>Carreta Alto Nível</h1>
     </div>
     <nav>
-      <a href="#services">Serviços</a>
-      <a href="#gallery">Galeria</a>
-      <a href="#contact">Contato</a>
+      <a href="#services" class="services-link">Serviços</a>
+      <a href="#gallery" class="gallery-link">Galeria</a>
+      <a href="#contact" class="contact-link">Contato</a>
     </nav>
   </header>
 
@@ -246,18 +208,16 @@
         Email: carretaaltonivel@gmail.com
       </a>
       <a href="https://www.instagram.com/carretaaltonivel/" target="_blank" class="instagram-link">
-        <img src="https://img.freepik.com/vetores-premium/icone-do-instagram-de-logotipo-de-distintivo-moderno_578229-124.jpg?semt=ais_hybrid&w=740&q=80" alt="Instagram" width="25">
-        @carretaaltonivel
+        📸 @carretaaltonivel
       </a>
     </div>
 
     <div class="contact-message">
       Nós da Carreta Alto Nível estamos prontos para tornar seu evento inesquecível!
     </div>
-  <div class="contact-message">
-      Carreta alto nível , um novo nível de diversão!!
+    <div class="contact-message">
+      Carreta alto nível, um novo nível de diversão!!
     </div>
-    
 
     <div class="biblical-quote">
       "Consagre ao Senhor tudo que você faz, e os seus planos serão bem-sucedidos." Provérbios 16:3
