@@ -48,7 +48,7 @@
     .gallery-grid img:hover, .gallery-grid video:hover { transform: scale(1.05); }
 
     /* Contato */
-    .contact { background-color: #ff6b6b; color: #fff; padding: 50px 20px; text-align: center; position: relative; }
+    .contact { background-color: #e42355; color: #fff; padding: 50px 20px; text-align: center; position: relative; }
     .contact h2 { font-size: 2rem; margin-bottom: 20px; }
     .contact p { margin-bottom: 10px; font-weight: 500; }
     .contact a {
@@ -57,8 +57,43 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .contact a:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
-    .contact .instagram-link { margin-top: 15px; }
+
+    /* Instagram estilizado */
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #fff;
+      margin-top: 15px;
+      transition: transform 0.3s ease;
+    }
+    .instagram-link img { width: 25px; height: 25px; border-radius: 50%; }
+    .instagram-link:hover { transform: scale(1.05); }
+
     .contact-message { margin-top: 30px; font-style: italic; font-size: 1.1rem; }
+
+    /* Botão flutuante WhatsApp com ícone */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: transform 0.3s;
+    }
+    .whatsapp-btn img { width: 35px; height: 35px; }
+    .whatsapp-btn:hover { transform: scale(1.1); }
 
     /* Frase bíblica */
     .biblical-quote {
@@ -98,9 +133,9 @@
 
   <!-- Carrossel -->
   <div class="carousel">
-    <img src="./img/WhatsApp Image 2025-10-14 at 12.43.32.jpeg" class="active" alt="Imagem 1">
-    <img src="./img/WhatsApp Image 2025-10-14 at 12.43.57.jpeg" alt="Imagem 2">
-    <img src="./img/WhatsApp Image 2025-10-14 at 12.43.57 (1).jpeg" alt="Imagem 3">
+    <img src="./img/WhatsApp Image 2025-10-14 at 12.43.57.jpeg" class="active" alt="Imagem 1">
+    <img src="./img/WhatsApp Image 2025-10-14 at 12.43.32.jpeg" alt="Imagem 2">
+    <img src="./img/WhatsApp Image 2025-10-14 at 16.38.46 (1).jpeg" alt="Imagem 3">
   </div>
 
   <!-- Nossos Serviços -->
@@ -108,16 +143,28 @@
     <h2>Nossos Serviços</h2>
     <div class="service-cards">
       <div class="service-card">
-        <h3>Aluguel de Carreta</h3>
-        <p>Oferecemos carretas para eventos e festas, com conforto e segurança.</p>
+        <h3>Aniversários</h3>
+        <p>Levamos diversão com música, animação e uma experiência inesquecível para o seu aniversário.</p>
       </div>
       <div class="service-card">
-        <h3>Personalização</h3>
-        <p>Carretas decoradas conforme o tema do seu evento.</p>
+        <h3>Casamentos</h3>
+        <p>Uma entrada divertida e diferente para os noivos e convidados, com carretas preparadas para o grande dia.</p>
       </div>
       <div class="service-card">
-        <h3>Transporte Seguro</h3>
-        <p>Nossos motoristas são experientes e garantem uma viagem tranquila.</p>
+        <h3>Debutantes</h3>
+        <p>Tornamos os 15 anos ainda mais especiais com um passeio cheio de encanto, estilo e boas lembranças.</p>
+      </div>
+      <div class="service-card">
+        <h3>Igrejas</h3>
+        <p>Ideal para passeios e eventos de confraternização, proporcionando união e momentos de alegria.</p>
+      </div>
+      <div class="service-card">
+        <h3>Eventos em geral</h3>
+        <p>Personalizamos o passeio para qualquer tipo de evento, levando diversão para todas as idades.</p>
+      </div>
+      <div class="service-card">
+        <h3>Aluguel de personagens para sua festa</h3>
+        <p>Contamos com personagens animados que interagem com o público e deixam sua festa ainda mais mágica.</p>
       </div>
     </div>
   </section>
@@ -126,10 +173,9 @@
   <section id="gallery" class="gallery">
     <h2>Galeria</h2>
     <div class="gallery-grid">
-      <img src="./img/" alt="Galeria 1">
+      <img src="./img/WhatsApp Image 2025-10-14 at 12.43.57 (1).jpeg" alt="Galeria 1">
       <img src="img/WhatsApp Image 2025-10-14 at 12.43.57 (2).jpeg" alt="Galeria 2">
       <img src="img/WhatsApp Image 2025-10-14 at 12.43.58.jpeg" alt="Galeria 3">
-      <!-- Vídeos corretamente inseridos -->
       <video controls>
         <source src="./videos/WhatsApp Video 2025-10-13 at 15.53.36 (1).mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
@@ -144,16 +190,21 @@
   <!-- Contato -->
   <section id="contact" class="contact">
     <h2>Contato</h2>
-    <p>Telefone: (XX) XXXX-XXXX</p>
-    <p>Email: contato@carretalt.com</p>
-    <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
-    <a href="https://www.instagram.com/seu_usuario/" target="_blank" class="instagram-link">
-      <img src="instagram-icon.png" alt="Instagram"> @seu_usuario
+    <p>Telefone/WhatsApp: <a href="https://wa.me/5517996804711" target="_blank">17 99680-4711</a></p>
+    <p>Email: carretaaltonivel@gmail.com</p>
+    <a href="https://wa.me/5517996804711" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/carretaaltonivel/" target="_blank" class="instagram-link">
+      <img src="instagram-icon.png" alt="Instagram"> @carretaaltonivel
     </a>
     <div class="contact-message">
       Nós da Carreta Alto Nível estamos prontos para tornar seu evento inesquecível!
     </div>
   </section>
+
+  <!-- Botão flutuante WhatsApp com ícone -->
+  <a href="https://wa.me/5517996804711" class="whatsapp-btn" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
 
   <!-- Frase bíblica -->
   <div class="biblical-quote">
