@@ -96,12 +96,27 @@
     .whatsapp-btn:hover { transform: scale(1.1); }
 
     /* Frase bíblica */
-    .biblical-quote {
-      position: fixed; bottom: 10px; right: 10px; font-size: 0.9rem;
-      font-style: italic; color: #555; background-color: rgba(255,255,255,0.7);
-      padding: 8px 12px; border-radius: 10px;
-    }
-
+  biblical-quote {
+  position: fixed; 
+  bottom: 20px; /* aumenta o espaçamento do botão */
+  left: 20px;    /* move para o canto esquerdo */
+  font-size: 0.95rem;
+  font-style: italic; 
+  color: #fff; 
+  background-color: rgba(0,0,0,0.5); /* fundo semi-transparente escuro para contraste */
+  padding: 10px 15px; 
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  max-width: 250px;
+}
+header img {
+  width: 150px;           /* tamanho da logo maior */
+  height: auto;           /* mantém proporção da imagem */
+  border-radius: 0;       /* remove o círculo */
+  object-fit: contain;    /* imagem ajusta proporcionalmente */
+  border: none;           /* sem contorno */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* sombra suave */
+}
     /* Responsividade */
     @media (max-width: 768px) {
       header h1 { font-size: 1.5rem; }
